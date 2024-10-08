@@ -3,10 +3,89 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Home Page</title>
+        <link rel="stylesheet" href="./css/homePage.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
     </head>
     <body>
-        <h1>HomePage</h1>
-        <h1>Login</h1>
+        <header>
+            <img src="./image/navbar.svg" alt="" />
+            <div id="home">
+                <img src="./image/home.svg" alt="" />
+                <p>Home</p>
+            </div>
+            <div id="navChild">
+                <div class="search_container">
+                    <img src="./image/search-normal.svg" alt="" />
+                    <input
+                        type="text"
+                        class="searchInput"
+                        placeholder="Search"
+                    />
+                </div>
+                <div class="iconBtn" onclick="hello">
+                    <img src="./image/ticket.svg" alt="" />
+                    <p>Ticket</p>
+                </div>
+                <div class="iconBtn">
+                    <img src="./image/video.svg" alt="" />
+                    <p>Movie</p>
+                </div>
+                <div class="iconBtn">
+                    <img src="./image/user.svg" alt="" />
+                    <p>Sign Up</p>
+                </div>
+            </div>
+            <img src="./image/notification.svg" alt="" />
+        </header>
+
+        <div class="banner">
+            <img src="./image/banner1.jpg" alt="" />
+            <div class="content">
+                <h1>Oppenheimer 2023</h1>
+                <p class="intro">Giới thiệu phim</p>
+                <p class="ct">
+                    Oppenheimer Oppenheimer là cha đẻ của bom nguyên tử do
+                    Christopher Nolan đạo diễn. Bộ phim dựa trên những sự kiện
+                    có thật với câu chuyện của J. Robert Oppenheimer. Dựa trên
+                    tiểu sử của Kay Byrd và Martin J. Sherwin. Phim dự kiến ​​sẽ
+                    ra rạp ở Mỹ vào ngày 21 tháng 7 năm 2023. Bộ phim sẽ được
+                    phát hành lần đầu tiên bởi Universal Pictures.
+                </p>
+                <div class="content_child">
+                    <h2>Thể loại</h2>
+                    <p>Lịch sử, kịch, tiểu sử</p>
+                    <div class="response">
+                        <div class="rp">
+                            <img src="./image/cib_imdb.svg" alt="" />
+                            <p>8.3/10</p>
+                        </div>
+                        <div class="rp">
+                            <img src="./image/zondicons_time.svg" alt="" />
+                            <p>Thời lượng</p>
+                        </div>
+                    </div>
+                    <button class="details">Chi tiết</button>
+                </div>
+            </div>
+
+            <div class="trans">
+                <img src="./image/prev.svg" alt="" />
+                <ul>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </ul>
+                <img src="./image/next.svg" alt="" />
+            </div>
+        </div>
     </body>
+    <script src="./javascript/homePage.js"></script>
 </html>

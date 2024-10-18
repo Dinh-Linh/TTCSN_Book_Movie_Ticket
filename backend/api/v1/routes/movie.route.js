@@ -2,6 +2,6 @@ const MovieController = require("../controllers/Movie.controller");
 const express = require("express");
 const Router = express.Router();
 
-Router.get("/movie", MovieController.index)
+Router.get("/movies", MovieController.index)
 
 module.exports = Router

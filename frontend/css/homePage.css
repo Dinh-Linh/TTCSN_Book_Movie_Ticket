@@ -17,7 +17,7 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 16px;
-    z-index: 3;
+    z-index: 999;
     background-color: #1c1c1c;
 }
 
@@ -264,4 +264,81 @@ header > #home:hover {
 
 .trans > img:hover {
     box-shadow: 0 0 10px 5px #fcc434;
+}
+
+.container_list_movie_playing {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.list_movie_playing {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    flex: 1;
+}
+
+.playing {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.playing > .category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.movie_playing {
+    margin-top: 20px;
+    flex: 1;
+}
+
+.movie_playing > .poster {
+    width: 100%;
+    height: 450px;
+}
+
+.poster > img {
+    width: 100%;
+    height: 100%;
+}
+
+.movie_playing > .title {
+    color: #fcc434;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 12px 0;
+}
+.inf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inf > button {
+    background-color: #f9ca50;
+    color: white;
+    border-radius: 32px;
+    padding: 12px 12px;
+    width: 100px;
+}
+
+.inf-detail > p {
+    margin: 8px 0;
+}
+
+.inf-detail > p > i {
+    margin-right: 12px;
+}
+
+#see {
+    color: #fcc434;
+    font-size: 20px;
+}
+
+.transs {
+    width: 12%;
+    margin: 12px auto;
 }

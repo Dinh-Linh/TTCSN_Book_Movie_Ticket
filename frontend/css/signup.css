@@ -8,7 +8,7 @@ html {
 }
 body {
   width: 1440px;
-  height: 924px;
+  height: 1047px;
   background: var(--Background---Dark, #222);
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
@@ -74,175 +74,236 @@ header nav .login_up a.login:hover {
   color: white;
   border: none;
 }
-
-/* *********** form dang nhap **** */
-.form_login {
+/* form dang ky */
+form.signup {
+  height: 690px;
   width: 515px;
-  height: 449px;
   margin-top: 100px;
   margin-left: 463px;
   margin-right: 463px;
   border-radius: 10px;
 }
-.form_login:hover {
+form.signup:hover {
   box-shadow: 0 0 10px #fcc33466;
 }
-.form_login form {
-  height: 100%;
-  width: 100%;
-}
-.form_login form h1 {
+form.signup h1 {
   color: white;
   margin-bottom: 25px;
   padding-left: 20px;
 }
-.form_login form .signup {
-  width: 303px;
+form.signup .already {
   height: 24px;
+  width: 100%;
   display: flex;
   align-items: center;
   padding-left: 20px;
 }
-.form_login form .signup span {
+form.signup .already span {
   color: var(--Text---Secondary---Dark, rgba(255, 255, 255, 0.5));
   font-family: Inter;
   font-size: 2rem;
   font-weight: 400;
   margin-right: 5px;
 }
-.form_login form .signup a {
+form.signup .already a {
   color: #fcc434;
   font-family: Inter;
   font-size: 2rem;
   font-weight: 400;
 }
-/* *** ussername *** */
-.form_login form .username_container {
-  margin-top: 50px;
-  height: 60px;
-  width: calc(100% -20px);
-  margin-left: 20px;
-}
-.form_login form .username_container input.custom_username {
-  height: 100%;
-  width: calc(100% - 20px);
-  display: flex;
-  align-items: center;
-  border-radius: 15px;
-  border: none;
-  background: var(--Foreground---Dark, #333);
-  /* padding-left: 20px; */
-}
-.form_login form .username_container input.custom_username::placeholder {
-  font-size: 2rem;
-  color: #ffffff93;
-  padding-left: 15px;
-}
-.form_login form .username_container input.custom_username[type="text"]:focus {
-  outline: none; /* Loại bỏ viền mặc định khi focus */
-  color: white;
-  font-size: 2rem;
-  padding: 30px;
-  box-shadow: 5px 5px 10px #fcc33433;
-}
-.form_login form .username_container input.custom_username[type="text"] {
-  outline: none;
-  color: white;
-  font-size: 2rem;
-  padding-left: 15px;
-}
-
-/* password */
-.form_login form .password_container {
-  margin-top: 15px;
-  height: 60px;
-  width: calc(100% -20px);
-  margin-left: 20px;
-}
-.form_login form .password_container input.custom_password {
-  height: 100%;
-  width: calc(100% - 20px);
-  display: flex;
-  align-items: center;
-  border-radius: 15px;
-  border: none;
-  background: var(--Foreground---Dark, #333);
-  /* padding-left: 20px; */
-}
-.form_login form .password_container input.custom_password::placeholder {
-  font-size: 2rem;
-  color: #ffffff93;
-  padding-left: 15px;
-}
-.form_login
-  form
-  .password_container
-  input.custom_password[type="password"]:focus {
-  outline: none; /* Loại bỏ viền mặc định khi focus */
-  color: white;
-  font-size: 2rem;
-  padding: 30px;
-  box-shadow: 5px 5px 10px #fcc33433;
-}
-.form_login form .password_container input.custom_password[type="password"] {
-  outline: none; /* Loại bỏ viền mặc định khi focus */
-  color: white;
-  font-size: 2rem;
-  padding: 15px;
-}
-/* remember me */
-.form_login form .remember {
-  margin-top: 41px;
+form.signup .check_role {
   height: 24px;
   width: 100%;
-  padding-left: 20px;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  padding-left: 20px;
+  margin-top: 50px;
 }
-.form_login form .remember span {
-  padding-left: 10px;
-  color: #fcc434;
-}
-.form_login form .remember_checkbox {
-  appearance: none; /* xóa ngoại j=hình hiện tại của check box */
+form.signup .check_role input[type="radio"] {
+  margin: 3px;
   height: 20px;
   width: 20px;
-  border-radius: 4px;
+  margin-right: 5px;
+  appearance: none; /*xo angoai hinh hien tai */
+  border-radius: 50%;
   border: 2px solid white;
   cursor: pointer;
   position: relative;
 }
 /* dã check thì đổi nền */
-.form_login form .remember_checkbox:checked {
+form.signup .check_role input[type="radio"]:checked {
+  border: 3px solid #fcc434;
+}
+form.signup .check_role input[type="radio"]:checked::before {
+  content: "";
+  color: #fcc434;
+  font-size: 5rem;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #fcc434;
+  border-radius: 50%;
+  left: 16%;
+  top: 15%;
+}
+form.signup .check_role label {
+  color: var(--Text---Secondary---Dark, rgba(255, 255, 255, 0.5));
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-right: 20px;
+}
+/* name */
+form.signup .name {
+  margin-top: 26px;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+}
+form.signup .name input[type="text"] {
+  width: 220px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  border: none;
+  background: var(--Foreground---Dark, #333);
+}
+form.signup .name input[type="text"]::placeholder {
+  font-size: 2rem;
+  color: #ffffff93;
+  padding-left: 15px;
+}
+form.signup .name input[type="text"]:focus {
+  outline: none; /* Loại bỏ viền mặc định khi focus */
+  color: white;
+  font-size: 2rem;
+  padding: 30px;
+  box-shadow: 5px 5px 10px #fcc33433;
+}
+form.signup .name input.firstname[type="text"],
+form.signup .name input.lastname[type="text"] {
+  outline: none;
+  color: white;
+  font-size: 2rem;
+  padding-left: 15px;
+}
+form.signup .name input.firstname[type="text"]:focus,
+form.signup .name input.lastname[type="text"]:focus {
+  padding: 30px;
+}
+/* *** username container */
+form.signup .password_container,
+form.signup .confrim_password_container,
+form.signup .username_container {
+  margin-top: 15px;
+  height: 60px;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+}
+form.signup .password_container input.custom_password[type="password"],
+form.signup
+  .confrim_password_container
+  input.custom_confirm_password[type="password"],
+form.signup .username_container input.custom_username[type="text"] {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  border: none;
+  background: var(--Foreground---Dark, #333);
+  outline: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 15px;
+}
+form.signup
+  .password_container
+  input.custom_password[type="password"]::placeholder,
+form.signup
+  .confrim_password_container
+  input.custom_confirm_password[type="password"]::placeholder,
+form.signup
+  .username_container
+  input.custom_username[type="text"]::placeholder {
+  font-size: 2rem;
+  color: #ffffff93;
+  padding-left: 15px;
+}
+form.signup .password_container input.custom_password[type="password"]:focus,
+form.signup
+  .confrim_password_container
+  input.custom_confirm_password[type="password"]:focus,
+form.signup .username_container input.custom_username[type="text"]:focus {
+  outline: none; /* Loại bỏ viền mặc định khi focus */
+  color: white;
+  font-size: 2rem;
+  padding: 30px;
+  box-shadow: 5px 5px 10px #fcc33433;
+}
+/* agree */
+form.signup .agree {
+  display: flex;
+  margin-top: 41px;
+  height: 24px;
+  width: 100%;
+  padding-left: 20px;
+
+  align-items: center;
+}
+form.signup .agree span {
+  color: var(--Text---Secondary---Dark, rgba(255, 255, 255, 0.5));
+  font-family: Inter;
+  font-size: 2rem;
+  font-weight: 400;
+}
+form.signup .agree span a {
+  color: #fcc434;
+}
+form.signup input.agree_checkbox {
+  margin-right: 4px;
+  height: 20px;
+  width: 20px;
+  appearance: none; /* xóa ngoại j=hình hiện tại của check box */
+  border-radius: 4px;
+  border: 2px solid white;
+  cursor: pointer;
+  position: relative;
+}
+form.signup input.agree_checkbox:checked {
   background-color: #fcc434;
 }
-.form_login form .remember_checkbox:checked::before {
+form.signup input.agree_checkbox:checked::before {
   content: "✔";
   color: #fff;
   font-size: 1.6rem;
   position: absolute;
-  left: 15%;
-  top: -17%;
+  left: 12%;
+  top: -18%;
 }
-/* button login */
-.form_login form input.login_btn {
+/* button create account  */
+form.signup input.cre_account {
   display: flex;
   height: 60px;
   width: calc(100% - 40px);
   background-color: #fcc434;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  margin-top: 40px;
   margin-left: 20px;
   color: #fff;
   font-size: 2rem;
 }
-.form_login form input.login_btn:active {
+form.signup input.cre_account:active {
   background-color: #f7d47d;
 }
-.form_login form input.login_btn:hover {
+form.signup input.cre_account:hover {
   cursor: pointer;
 }
 /* **********  footer ******** */

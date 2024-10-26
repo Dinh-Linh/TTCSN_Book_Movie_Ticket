@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home Page</title>
+        <link rel="stylesheet" href="./css/homePage.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-    <link rel="stylesheet" href="./css/homePage.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-</head>
-
-<body>
-    <header>
-        <div id="iconNav">
-            <img src="./image/navbar.svg" alt="" />
-        </div>
-        <div id="home">
-            <img src="./image/home.svg" alt="" />
-            <p>Home</p>
-        </div>
-        <div id="navChild">
-            <div class="search_container">
-                <img src="./image/search-normal.svg" alt="" />
-                <input type="text" class="searchInput" placeholder="Search" />
+    <body>
+        <header>
+            <div id="iconNav">
+                <img src="./image/navbar.svg" alt="" />
             </div>
-            <div class="iconBtn" onclick="hello">
-                <img src="./image/ticket.svg" alt="" />
-                <p>Ticket</p>
+            <div id="home">
+                <img src="./image/home.svg" alt="" />
+                <p>Home</p>
             </div>
-            <div class="iconBtn">
-                <img src="./image/video.svg" alt="" />
-                <p>Movie</p>
+            <div id="navChild">
+                <div class="search_container">
+                    <img src="./image/search-normal.svg" alt="" />
+                    <input
+                        type="text"
+                        class="searchInput"
+                        placeholder="Search"
+                    />
+                </div>
+                <div class="iconBtn" onclick="hello">
+                    <img src="./image/ticket.svg" alt="" />
+                    <p>Ticket</p>
+                </div>
+                <div class="iconBtn">
+                    <img src="./image/video.svg" alt="" />
+                    <p>Movie</p>
+                </div>
+                <div class="iconBtn">
+                    <img src="./image/user.svg" alt="" />
+                    <p>Sign Up</p>
+                </div>
             </div>
-            <div class="iconBtn">
-                <img src="./image/user.svg" alt="" />
-                <p>Sign Up</p>
-            </div>
+            <img src="./image/notification.svg" alt="" />
+        </header>
+
+        <div class="banner_container"></div>
+
+        <div class="trans">
+            <img src="./image/prev.svg" alt="prev" class="prev" />
+            <ul>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </ul>
+            <img src="./image/next.svg" alt="next" class="next" />
         </div>
-        <img src="./image/notification.svg" alt="" />
-    </header>
 
-    <div class="banner_container"></div>
-
-    <div class="trans">
-        <img src="./image/prev.svg" alt="prev" class="prev" />
-        <ul>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </ul>
-        <img src="./image/next.svg" alt="next" class="next" />
-    </div>
-
-    <div class="playing" style="color: white; margin-top: 200px">
-        <div class="category">
-            <h1>NOW PLAYING</h1>
-            <id id="see">See All >></id>
-        </div>
-        <hr />
-        <div class="container_list_movie_playing">
-            <img src="./image/prev.svg" alt="prev" />
-            <div class="list_movie_playing">
-                <!-- <div class="movie_playing">
+        <div class="playing" style="color: white; margin-top: 200px">
+            <div class="category">
+                <h1>NOW PLAYING</h1>
+                <id id="see">See All >></id>
+            </div>
+            <hr />
+            <div class="container_list_movie_playing">
+                <img src="./image/prev.svg" alt="prev" />
+                <div class="list_movie_playing">
+                    <!-- <div class="movie_playing">
                         <div class="poster">
                             <img src="./image/img_playing_1.png" alt="" />
                         </div>
@@ -82,88 +88,31 @@
                             <button id="book_ticket">Đặt vé</button>
                         </div>
                     </div> -->
+                </div>
+                <img src="./image/next.svg" alt="next" />
             </div>
-            <img src="./image/next.svg" alt="next" />
+            <div class="transs">
+                <ul>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </ul>
+            </div>
         </div>
-        <div class="transs">
-            <ul>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </ul>
-        </div>
-    </div>
 
-    <div class="playing" style="color: white; margin-top: 200px">
-        <div class="category">
-            <h1>COMING SOON</h1>
-            <id id="see">See All >></id>
-        </div>
-        <hr />
-        <div class="container_list_movie_playing">
-            <img src="./image/prev.svg" alt="prev" />
-            <div class="list_movie_playing" movie-playing-comingsoon>
-                <!-- <div class="movie_playing">
-                        <div class="poster">
-                            <img src="./image/img_playing_1.png" alt="" />
-                        </div>
-                        <div class="title">Avatar 2: The way of water</div>
-                        <div class="inf">
-                            <div class="inf-detail">
-                                <p>
-                                    <i class="fa-solid fa-video"></i>Adventure,
-                                    Sci-fi
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-calendar"></i
-                                    >20/10/2024
-                                </p>
-                            </div>
-                            <button id="book_ticket">Đặt vé</button>
-                        </div>
-                    </div>
-                    <div class="movie_playing">
-                        <div class="poster">
-                            <img src="./image/img_playing_1.png" alt="" />
-                        </div>
-                        <div class="title">Avatar 2: The way of water</div>
-                        <div class="inf">
-                            <div class="inf-detail">
-                                <p>
-                                    <i class="fa-solid fa-video"></i>Adventure,
-                                    Sci-fi
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-calendar"></i
-                                    >20/10/2024
-                                </p>
-                            </div>
-                            <button id="book_ticket">Đặt vé</button>
-                        </div>
-                    </div>
-                    <div class="movie_playing">
-                        <div class="poster">
-                            <img src="./image/img_playing_1.png" alt="" />
-                        </div>
-                        <div class="title">Avatar 2: The way of water</div>
-                        <div class="inf">
-                            <div class="inf-detail">
-                                <p>
-                                    <i class="fa-solid fa-video"></i>Adventure,
-                                    Sci-fi
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-calendar"></i
-                                    >20/10/2024
-                                </p>
-                            </div>
-                            <button id="book_ticket">Đặt vé</button>
-                        </div>
-                    </div>
-                    <div class="movie_playing">
+        <div class="playing" style="color: white; margin-top: 200px">
+            <div class="category">
+                <h1>COMING SOON</h1>
+                <id id="see">See All >></id>
+            </div>
+            <hr />
+            <div class="container_list_movie_playing">
+                <img src="./image/prev.svg" alt="prev" />
+                <div class="list_movie_playing" movie-playing-comingsoon>
+                    <!-- <div class="movie_playing">
                         <div class="poster">
                             <img src="./image/img_playing_1.png" alt="" />
                         </div>
@@ -182,21 +131,70 @@
                             <button id="book_ticket">Đặt vé</button>
                         </div>
                     </div> -->
+                </div>
+                <img src="./image/next.svg" alt="next" />
             </div>
-            <img src="./image/next.svg" alt="next" />
+            <div class="transs">
+                <ul>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </ul>
+            </div>
         </div>
-        <div class="transs">
-            <ul>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </ul>
+        <div id="mockup">
+            <img src="./image/Mockup.svg" alt="" />
         </div>
-    </div>
-</body>
-<script type="module" src="./javascript/homePage.js"></script>
-
+        <footer id="ft">
+            <div class="container">
+                <div class="ctn_left">
+                    <div class="footer-left">
+                        <h3>Thông tin</h3>
+                        <hr />
+                        <ul>
+                            <li>Liên hệ</li>
+                            <li>Giới thiệu</li>
+                            <li>Khiếu nại bản quyền</li>
+                            <li>Chính sách bảo mật</li>
+                        </ul>
+                    </div>
+                    <div class="footer-center">
+                        <h3>Người thực hiện</h3>
+                        <hr />
+                        <ul>
+                            <li>Nguyễn Công Băng</li>
+                            <li>Hoàng Thu Thảo</li>
+                            <li>Nguyễn Đình Linh</li>
+                            <li>Nguyễn Quốc Huy</li>
+                            <li>Lê Trân Huy</li>
+                        </ul>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="footer-right">
+                    <h2>Build Your Dream</h2>
+                    <p>
+                        Website bán vé xem phim online giúp người dùng dễ dàng
+                        chọn phim, so sánh giá và đặt vé nhanh chóng. Khách hàng
+                        có thể xem lịch chiếu, chọn ghế và thanh toán trực
+                        tuyến. Hệ thống cung cấp trải nghiệm tiện lợi, giảm
+                        thiều thời gian chờ đợi tại rạp. Giao diện đơn giản và
+                        thân thiện với người dùng.
+                    </p>
+                    <div class="contact">
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>  
+                        </div>
+                        <p>Hotline: 0********312</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script type="module" src="./javascript/homePage.js"></script>
 </html>

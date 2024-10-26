@@ -23,6 +23,24 @@ export const movieData = [
         location: "Hoàn Kiếm",
         date: "20/10/2024",
     },
+    {
+        poster: "img_playing_1.png",
+        title: "Nhà bà nữ",
+        location: "Hoàn Kiếm",
+        date: "20/10/2024",
+    },
+    {
+        poster: "img_playing_1.png",
+        title: "Nhà bà nữ",
+        location: "Hoàn Kiếm",
+        date: "20/10/2024",
+    },
+    {
+        poster: "img_playing_1.png",
+        title: "Nhà bà nữ",
+        location: "Hoàn Kiếm",
+        date: "20/10/2024",
+    },
 ];
 export const bannersData = [
     {

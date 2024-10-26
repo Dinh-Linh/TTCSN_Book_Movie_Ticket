@@ -4,8 +4,10 @@ import { bannersData, movieData } from "./fakeData.js";
 // Sử dụng dữ liệu trong `bannersData` và `movieData`
 const bannerContainer = document.querySelector(".banner_container");
 const moviePlaying = document.querySelector(".list_movie_playing");
-const moviePlayingComingsoon = document.querySelector("[movie-playing-comingsoon]");
-console.log(moviePlayingComingsoon)
+const moviePlayingComingsoon = document.querySelector(
+    "[movie-playing-comingsoon]"
+);
+console.log(moviePlayingComingsoon);
 
 // Tạo danh sách banner
 let str = "";
@@ -62,7 +64,7 @@ movieData.forEach((movie) => {
         </div>
     `;
 });
-moviePlayingComingsoon.innerHTML = str_movie_playing
+moviePlayingComingsoon.innerHTML = str_movie_playing;
 moviePlaying.innerHTML = str_movie_playing;
 
 let slideIndex = 1;
@@ -106,3 +108,36 @@ const dots = document.querySelectorAll(".trans .dot");
 dots.forEach((dot, index) => {
     dot.addEventListener("click", () => currentSlide(index + 1));
 });
+
+//show list movie playing and coming soon playing
+const itemsToShow = 4; // Number of items to display at a time
+const totalMovies = movieData.length;
+let currentIndex = 0;
+const prevButton = document.querySelector(
+    '.container_list_movie_playing img[alt="prev"]'
+);
+const nextButton = document.querySelector(
+    '.container_list_movie_playing img[alt="next"]'
+);
+function updateMovieDisplay() {
+    const offset = currentIndex * (100 / itemsToShow);
+    moviePlaying.style.transform = `translateX(-${offset}%)`;
+}
+
+prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateMovieDisplay();
+    }
+    console.log("prev");
+});
+
+nextButton.addEventListener("click", () => {
+    if (currentIndex < Math.ceil(totalMovies / itemsToShow) - 1) {
+        currentIndex++;
+        updateMovieDisplay();
+    }
+    console.log("next");
+});
+
+updateMovieDisplay();

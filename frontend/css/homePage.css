@@ -274,22 +274,8 @@ header > #home:hover {
     box-shadow: 0 0 10px 5px #fcc434;
 }
 
-.container_list_movie_playing {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    position: relative;
-}
-
-.container_list_movie_playing > img {
-    position: absolute;
-    z-index: 10;
-}
-
-.container_list_movie_playing > img:last-child {
-    right: 0;
-}
-.list_movie_playing {
+.list_movie_playing,
+.list_movie_coming_soon {
     display: flex;
     justify-content: space-between;
     gap: 32px;
@@ -297,6 +283,7 @@ header > #home:hover {
     overflow: hidden;
     transition: transform 0.5s ease;
     margin: 0 30px;
+    margin-top: 20px;
 }
 
 .playing {
@@ -360,10 +347,6 @@ header > #home:hover {
     font-size: 20px;
 }
 
-.transs {
-    width: 12%;
-    margin: 12px auto;
-}
 footer {
     color: white;
     background-color: #141212;
@@ -385,6 +368,7 @@ footer > .container {
     flex: 1;
     padding-top: 30px;
     position: relative;
+    padding-bottom: 40px;
 }
 
 .ctn_left > p {
@@ -416,7 +400,7 @@ ul > li {
     line-height: 32px;
 }
 
-.social-media a {
+.social-media a i {
     margin: 0 10px;
     color: #fff;
 }
@@ -449,4 +433,34 @@ button:hover {
     border: 1px solid #fcc434;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+}
+
+/* slick icon */
+.slick-prev,
+.slick-next {
+    z-index: 10;
+    border: none;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: black;
+}
+
+.slick-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.slick-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.slick-initialized .slick-slide {
+    margin: 0 10px;
 }

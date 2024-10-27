@@ -4,10 +4,10 @@ import { bannersData, movieData } from "./fakeData.js";
 // Sử dụng dữ liệu trong `bannersData` và `movieData`
 const bannerContainer = document.querySelector(".banner_container");
 const moviePlaying = document.querySelector(".list_movie_playing");
-const moviePlayingComingsoon = document.querySelector(
-    "[movie-playing-comingsoon]"
+const moviePlayingComingSoon = document.querySelector(
+    ".list_movie_coming_soon"
 );
-console.log(moviePlayingComingsoon);
+console.log(moviePlayingComingSoon);
 
 // Tạo danh sách banner
 let str = "";
@@ -64,7 +64,7 @@ movieData.forEach((movie) => {
         </div>
     `;
 });
-moviePlayingComingsoon.innerHTML = str_movie_playing;
+moviePlayingComingSoon.innerHTML = str_movie_playing;
 moviePlaying.innerHTML = str_movie_playing;
 
 let slideIndex = 1;
@@ -109,35 +109,24 @@ dots.forEach((dot, index) => {
     dot.addEventListener("click", () => currentSlide(index + 1));
 });
 
-//show list movie playing and coming soon playing
-const itemsToShow = 4; // Number of items to display at a time
-const totalMovies = movieData.length;
-let currentIndex = 0;
-const prevButton = document.querySelector(
-    '.container_list_movie_playing img[alt="prev"]'
-);
-const nextButton = document.querySelector(
-    '.container_list_movie_playing img[alt="next"]'
-);
-function updateMovieDisplay() {
-    const offset = currentIndex * (100 / itemsToShow);
-    moviePlaying.style.transform = `translateX(-${offset}%)`;
-}
-
-prevButton.addEventListener("click", () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateMovieDisplay();
-    }
-    console.log("prev");
+$(".list_movie_playing").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    prevArrow:
+        "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+    nextArrow:
+        "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
 });
 
-nextButton.addEventListener("click", () => {
-    if (currentIndex < Math.ceil(totalMovies / itemsToShow) - 1) {
-        currentIndex++;
-        updateMovieDisplay();
-    }
-    console.log("next");
+$(".list_movie_coming_soon").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 2000,
+    prevArrow:
+        "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+    nextArrow:
+        "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
 });
-
-updateMovieDisplay();

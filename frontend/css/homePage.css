@@ -6,6 +6,16 @@
 
 body {
     background-color: black;
+    font-family: "Poppins";
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../font/poppins_light.otf") format("truetype");
+}
+a {
+    text-decoration: none;
+    color: #141212;
 }
 
 header {
@@ -194,20 +204,18 @@ header > #home:hover {
     width: 100%;
     border: none;
     background-color: #fcc434;
-    border-radius: 4px;
+    border-radius: 8px;
     color: #fff;
     font-weight: 500;
     font-size: 16px;
     padding: 12px 0;
     margin: 20px 0;
-    transition: border 0.4s ease-in-out;
 }
 
 .banner > .content > .content_child > button:hover {
-    background-color: #fff;
+    background-color: white;
     color: #fcc434;
-    cursor: pointer;
-    box-shadow: 0 0 2px 2px #fcc434;
+    transition: 0.4s ease-in-out;
 }
 .response > .rp {
     display: flex;
@@ -389,11 +397,6 @@ footer > .container {
     bottom: 0;
 }
 
-.footer-left,
-.footer-center {
-    margin-right: 60px;
-}
-
 .footer-left {
     padding-left: 30%;
 }
@@ -401,7 +404,7 @@ footer > .container {
 .footer-left > hr,
 .footer-center > hr {
     width: 90%;
-    margin: 12px 0;
+    margin: 12px auto;
 }
 
 ul {
@@ -428,4 +431,22 @@ ul > li {
     display: flex;
     gap: 28px;
     justify-content: center;
+}
+
+.footer-right > p {
+    text-align: justify;
+    width: 80%;
+    margin: 12px auto;
+}
+
+.footer-right > .contact {
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: white;
+    color: #fcc434;
+    border: 1px solid #fcc434;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }

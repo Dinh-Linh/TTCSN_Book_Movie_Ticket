@@ -7,12 +7,16 @@
         <link rel="stylesheet" href="./css/homePage.css" />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         />
     </head>
+
     <body>
         <header>
-            <img src="./image/navbar.svg" alt="" />
+            <div id="iconNav">
+                <img src="./image/navbar.svg" alt="" />
+            </div>
             <div id="home">
                 <img src="./image/home.svg" alt="" />
                 <p>Home</p>
@@ -34,58 +38,112 @@
                     <img src="./image/video.svg" alt="" />
                     <p>Movie</p>
                 </div>
-                <div class="iconBtn">
+                <a class="iconBtn" href="./html/signup.html">
                     <img src="./image/user.svg" alt="" />
                     <p>Sign Up</p>
-                </div>
+                </a>
             </div>
             <img src="./image/notification.svg" alt="" />
         </header>
 
-        <div class="banner">
-            <img src="./image/banner1.jpg" alt="" />
-            <div class="content">
-                <h1>Oppenheimer 2023</h1>
-                <p class="intro">Giới thiệu phim</p>
-                <p class="ct">
-                    Oppenheimer Oppenheimer là cha đẻ của bom nguyên tử do
-                    Christopher Nolan đạo diễn. Bộ phim dựa trên những sự kiện
-                    có thật với câu chuyện của J. Robert Oppenheimer. Dựa trên
-                    tiểu sử của Kay Byrd và Martin J. Sherwin. Phim dự kiến ​​sẽ
-                    ra rạp ở Mỹ vào ngày 21 tháng 7 năm 2023. Bộ phim sẽ được
-                    phát hành lần đầu tiên bởi Universal Pictures.
-                </p>
-                <div class="content_child">
-                    <h2>Thể loại</h2>
-                    <p>Lịch sử, kịch, tiểu sử</p>
-                    <div class="response">
-                        <div class="rp">
-                            <img src="./image/cib_imdb.svg" alt="" />
-                            <p>8.3/10</p>
-                        </div>
-                        <div class="rp">
-                            <img src="./image/zondicons_time.svg" alt="" />
-                            <p>Thời lượng</p>
+        <div class="banner_container"></div>
+
+        <div class="trans">
+            <img src="./image/prev.svg" alt="prev" class="prev" />
+            <ul>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </ul>
+            <img src="./image/next.svg" alt="next" class="next" />
+        </div>
+
+        <div class="playing" style="color: white; margin-top: 200px">
+            <div class="category">
+                <h1>NOW PLAYING</h1>
+                <a id="see" href="">See All >></a>
+            </div>
+            <hr />
+            <div class="list_movie_playing"></div>
+        </div>
+
+        <div class="playing" style="color: white; margin-top: 200px">
+            <div class="category">
+                <h1>COMING SOON</h1>
+                <a id="see" href="">See All >></a>
+            </div>
+            <hr />
+            <div class="list_movie_coming_soon"></div>
+        </div>
+        <div id="mockup">
+            <img src="./image/Mockup.svg" alt="" />
+        </div>
+        <footer id="ft">
+            <div class="container">
+                <div class="ctn_left">
+                    <div class="footer-left">
+                        <h3>Thông tin</h3>
+                        <hr />
+                        <ul>
+                            <li>Liên hệ</li>
+                            <li>Giới thiệu</li>
+                            <li>Khiếu nại bản quyền</li>
+                            <li>Chính sách bảo mật</li>
+                        </ul>
+                    </div>
+                    <div class="footer-center">
+                        <h3>Người thực hiện</h3>
+                        <hr />
+                        <ul>
+                            <li>Nguyễn Công Bằng</li>
+                            <li>Hoàng Thu Thảo</li>
+                            <li>Nguyễn Đình Linh</li>
+                            <li>Nguyễn Quốc Huy</li>
+                            <li>Lê Trân Huy</li>
+                        </ul>
+                    </div>
+                    <p></p>
+                </div>
+                <div class="footer-right">
+                    <h2>Build Your Dream</h2>
+                    <p>
+                        Website bán vé xem phim online giúp người dùng dễ dàng
+                        chọn phim, so sánh giá và đặt vé nhanh chóng. Khách hàng
+                        có thể xem lịch chiếu, chọn ghế và thanh toán trực
+                        tuyến. Hệ thống cung cấp trải nghiệm tiện lợi, giảm
+                        thiều thời gian chờ đợi tại rạp. Giao diện đơn giản và
+                        thân thiện với người dùng.
+                    </p>
+                    <div class="contact">
+                        <p>Hotline: 0********312</p>
+                        <div class="social-media">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"
+                                ><i class="fa-brands fa-instagram"></i
+                            ></a>
                         </div>
                     </div>
-                    <button class="details">Chi tiết</button>
                 </div>
             </div>
-
-            <div class="trans">
-                <img src="./image/prev.svg" alt="" />
-                <ul>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </ul>
-                <img src="./image/next.svg" alt="" />
-            </div>
-        </div>
+        </footer>
     </body>
-    <script src="./javascript/homePage.js"></script>
+    <script
+        type="text/javascript"
+        src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+        type="text/javascript"
+        src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <script type="module" src="./javascript/homePage.js"></script>
 </html>

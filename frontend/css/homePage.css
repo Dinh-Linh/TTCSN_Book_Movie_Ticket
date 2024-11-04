@@ -31,16 +31,20 @@ header {
     background-color: #1c1c1c;
 }
 
-header > .iconNav {
-    width: 60px;
-    height: 80%;
+header > #iconNav,
+header > #home,
+header > #notification {
     border-radius: 12px;
     text-align: center;
+    padding: 4px 12px;
 }
 
 header > #iconNav:hover,
-header > #home:hover {
-    background-color: #cbc0c0;
+header > #home:hover,
+header > #notification:hover {
+    background-color: rgb(234, 228, 228, 0.4);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 
 #navChild {
@@ -60,6 +64,7 @@ header > #home:hover {
 #navChild > .iconBtn {
     text-align: center;
     width: 80px;
+    border-radius: 24px;
 }
 
 #home > img {
@@ -98,7 +103,8 @@ header > #home:hover {
 
 .iconBtn:hover {
     background-color: wheat;
-    border-radius: 24px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .banner_container {
@@ -347,6 +353,13 @@ header > #home:hover {
     font-size: 20px;
 }
 
+#see:hover {
+    text-shadow: 0 0 20px rgba(243, 235, 10, 0.956),
+        0 0 20px rgba(248, 236, 10, 0.957), 0 0 20px rgba(241, 214, 7, 0.984),
+        0 0 20px rgb(241, 210, 12);
+    transition: 0.3s ease-in-out;
+}
+
 footer {
     color: white;
     background-color: #141212;
@@ -463,4 +476,45 @@ button:hover {
 
 .slick-initialized .slick-slide {
     margin: 0 10px;
+}
+
+.list_sale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.list_sale > .sale_img {
+    width: 31%;
+}
+
+.sale_img > img {
+    width: 100%;
+}
+
+#mockup {
+    display: flex;
+    padding: 20px 60px;
+    margin: 20px 0;
+    background: linear-gradient(180deg, rgba(5, 59, 163, 0) 40%, #fcc434 100%);
+}
+
+#mockup > .content {
+    color: white;
+}
+
+#mockup > .content {
+    line-height: 2em;
+}
+
+#mockup > .content > h1 {
+    padding: 12px 0;
+}
+
+#mockup > .content > button {
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 40px;
 }

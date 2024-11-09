@@ -518,3 +518,126 @@ button:hover {
     border: none;
     margin-top: 40px;
 }
+
+/* Responsive */
+/* Điện thoại */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #iconNav,
+    #home,
+    #notification {
+        padding: 8px;
+    }
+
+    #navChild {
+        width: 100%;
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .search_container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .iconBtn {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .banner_container {
+        height: 400px;
+    }
+
+    .content > .content_child > button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .playing {
+        margin-top: 50px;
+    }
+
+    .list_movie_playing,
+    .list_movie_coming_soon {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .list_sale {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mockup img {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 15px;
+    }
+
+    #navChild {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .search_container {
+        width: 60%;
+    }
+
+    .iconBtn {
+        width: auto;
+    }
+
+    .banner_container {
+        height: 600px;
+    }
+
+    .playing .category h1 {
+        font-size: 24px;
+    }
+
+    .list_movie_playing,
+    .list_movie_coming_soon {
+        gap: 16px;
+    }
+
+    .movie_playing .title {
+        font-size: 18px;
+    }
+
+    .list_sale {
+        gap: 16px;
+    }
+
+    footer {
+        padding: 30px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 30%;
+    }
+}

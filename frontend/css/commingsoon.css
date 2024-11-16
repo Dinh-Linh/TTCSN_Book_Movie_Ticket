@@ -50,7 +50,7 @@ main {
   margin-right: auto;
   margin-bottom: 100px;
 }
-.np_cs_btn button.nowplaying_btn {
+.np_cs_btn button.commingsoon_btn {
   height: 100%;
   width: calc(100% / 2);
   font-size: 1.8rem;
@@ -62,7 +62,7 @@ main {
   background-color: #fcc434;
   outline: none;
 }
-.np_cs_btn button.commingsoon_btn {
+.np_cs_btn button.nowplaying_btn {
   height: 100%;
   width: calc(100% / 2);
   font-size: 1.8rem;
@@ -73,13 +73,13 @@ main {
   cursor: pointer;
   background-color: #1c1c1c72;
 }
-.np_cs_btn button.nowplaying_btn:active {
+.np_cs_btn button.commingsoon_btn:active {
   box-shadow: 0 5px 15px rgba(234, 232, 232, 0.3); /* Bóng đổ khi nhấn */
   transform: translateY(2px); /* Thực hiện chút di chuyển khi nhấn */
   outline: none;
   color: white;
 }
-.np_cs_btn button.commingsoon_btn:active {
+.np_cs_btn button.nowplaying_btn:active {
   box-shadow: 0 5px 15px rgba(234, 232, 232, 0.3); /* Bóng đổ khi nhấn */
   transform: translateY(2px); /* Thực hiện chút di chuyển khi nhấn */
   outline: none;

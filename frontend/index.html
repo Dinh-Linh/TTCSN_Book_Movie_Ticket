@@ -10,46 +10,59 @@
             type="text/css"
             href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
         />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
 
     <body>
         <header>
             <div id="iconNav">
-                <img src="./image/navbar.svg" alt="" />
+                <img src="./image/homePage_image/navbar.svg" alt="" />
             </div>
             <div id="home">
-                <img src="./image/home.svg" alt="" />
+                <img src="./image/homePage_image/home.svg" alt="" />
                 <p>Home</p>
             </div>
             <div id="navChild">
                 <div class="search_container">
-                    <img src="./image/search-normal.svg" alt="" />
-                    <input
-                        type="text"
-                        class="searchInput"
-                        placeholder="Search"
+                    <img
+                        src="./image/homePage_image/search-normal.svg"
+                        alt=""
                     />
+                    <input type="text" id="searchInput" placeholder="Search" />
                 </div>
                 <div class="iconBtn" onclick="hello">
-                    <img src="./image/ticket.svg" alt="" />
+                    <img src="./image/homePage_image/ticket.svg" alt="" />
                     <p>Ticket</p>
                 </div>
                 <div class="iconBtn">
-                    <img src="./image/video.svg" alt="" />
+                    <img src="./image/homePage_image/video.svg" alt="" />
                     <p>Movie</p>
                 </div>
                 <a class="iconBtn" href="./html/signup.html">
-                    <img src="./image/user.svg" alt="" />
+                    <img src="./image/homePage_image/user.svg" alt="" />
                     <p>Sign Up</p>
                 </a>
             </div>
-            <img src="./image/notification.svg" alt="" />
+            <div id="notification">
+                <img src="./image/homePage_image/notification.svg" alt="" />
+            </div>
         </header>
 
         <div class="banner_container"></div>
 
         <div class="trans">
-            <img src="./image/prev.svg" alt="prev" class="prev" />
+            <img
+                src="./image/homePage_image/prev.svg"
+                alt="prev"
+                class="prev"
+            />
             <ul>
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -58,13 +71,17 @@
                 <div class="dot"></div>
                 <div class="dot"></div>
             </ul>
-            <img src="./image/next.svg" alt="next" class="next" />
+            <img
+                src="./image/homePage_image/next.svg"
+                alt="next"
+                class="next"
+            />
         </div>
 
         <div class="playing" style="color: white; margin-top: 200px">
             <div class="category">
                 <h1>NOW PLAYING</h1>
-                <a id="see" href="">See All >></a>
+                <a id="see" href="./html/nowplaying.html">See All >></a>
             </div>
             <hr />
             <div class="list_movie_playing"></div>
@@ -73,13 +90,44 @@
         <div class="playing" style="color: white; margin-top: 200px">
             <div class="category">
                 <h1>COMING SOON</h1>
-                <a id="see" href="">See All >></a>
+                <a id="see" href="./html/commingsoon.html">See All >></a>
             </div>
             <hr />
             <div class="list_movie_coming_soon"></div>
         </div>
+
+        <div class="playing" style="color: white; margin-top: 200px">
+            <div class="category">
+                <h1>Khuyến mãi</h1>
+                <a id="see" href="">See All >></a>
+            </div>
+            <hr />
+            <div class="list_sale">
+                <div class="sale_img">
+                    <img src="./image/homePage_image/discount.svg" alt="" />
+                </div>
+                <div class="sale_img">
+                    <img src="./image/homePage_image/discount.svg" alt="" />
+                </div>
+                <div class="sale_img">
+                    <img src="./image/homePage_image/discount.svg" alt="" />
+                </div>
+            </div>
+        </div>
         <div id="mockup">
-            <img src="./image/Mockup.svg" alt="" />
+            <div class="content">
+                <h1>Watch Everywhere</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
+                    sit obcaecati distinctio. Sint consectetur vel numquam, nam
+                    laborum itaque ea voluptate possimus. Ipsum suscipit quas
+                    omnis. Asperiores tempora dolores totam! Totam fugiat
+                    similique dolorem corrupti minus ipsum vero ea pariatur
+                    facilis, asperiores sint optio.
+                </p>
+                <button type="button">Let's start</button>
+            </div>
+            <img src="./image/homePage_image/Mockup.svg" alt="" />
         </div>
         <footer id="ft">
             <div class="container">

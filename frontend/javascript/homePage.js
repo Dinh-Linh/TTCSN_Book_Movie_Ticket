@@ -14,7 +14,7 @@ let str = "";
 bannersData.forEach((banner) => {
     str += `
         <div class="banner fade">
-            <img src="./image/${banner.img}" alt="" />
+            <img src="./image/homePage_image/${banner.img}" alt="" />
             <div class="content">
                 <h1>${banner.title}</h1>
                 <p class="intro">Giới thiệu phim</p>
@@ -24,11 +24,11 @@ bannersData.forEach((banner) => {
                     <p>${banner.category}</p>
                     <div class="response">
                         <div class="rp">
-                            <img src="./image/cib_imdb.svg" alt="" />
+                            <img src="./image/homePage_image/cib_imdb.svg" alt="" />
                             <p>${banner.point}</p>
                         </div>
                         <div class="rp">
-                            <img src="./image/zondicons_time.svg" alt="" />
+                            <img src="./image/homePage_image/zondicons_time.svg" alt="" />
                             <p>${banner.duration}</p>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ movieData.forEach((movie) => {
     str_movie_playing += `
         <div class="movie_playing">
             <div class="poster">
-                <img src="./image/${movie.poster}" alt="" />
+                <img src="./image/homePage_image/${movie.poster}" alt="" />
             </div>
             <div class="title">${movie.title}</div>
             <div class="inf">
@@ -129,4 +129,10 @@ $(".list_movie_coming_soon").slick({
         "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
     nextArrow:
         "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+});
+
+document.getElementById("searchInput").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        console.log(document.getElementById("searchInput").value);
+    }
 });

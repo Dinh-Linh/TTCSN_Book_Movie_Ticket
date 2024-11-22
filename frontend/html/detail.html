@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/detail.css">
+    <title>Chi tiết phim và đặt vé</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <!-- Vị trí để chèn header -->
+
+    <main>
+        <div class="detail_of_film">
+            <div class="power_left">
+                <img src="../image/detail_imgae/avatar.png" alt="" class="poster">
+                <div class="name_review">
+                    <p id="namefilm">Avengers: Infinity </p>
+                    <div class="TL_NPH">
+                        <p id="thoiluong">2h59m</p>
+                        <p> • </p>
+                        <p id="ngayphathanh">12.12.2022</p>
+                    </div>
+                    <div class="review">
+                        <p>Review</p>
+                        <img src="../image/detail_imgae/Star 7.png" alt="star">
+                        <p class="numberOfstar">4.8</p>
+                        <p class="numberOfreview">(1.222)</p>
+                    </div>
+                    <div class="review_bottom">
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating_input" value="5">
+                            <label for="star5">★</label>
+                            
+                            <input type="radio" id="star4" name="rating_input" value="4">
+                            <label for="star4">★</label>
+                            
+                            <input type="radio" id="star3" name="rating_input" value="3">
+                            <label for="star3">★</label>
+                            
+                            <input type="radio" id="star2" name="rating_input" value="2">
+                            <label for="star2">★</label>
+                            
+                            <input type="radio" id="star1" name="rating_input" value="1">
+                            <label for="star1">★</label>
+                          </div>
+                        <button type="button" class="readnews"><img src="../image/detail_imgae/readnewa poligon.png" alt=""> Read news</button>
+                    </div>
+                </div>
+            </div>
+            <div class="power_right">
+                 <div class="mcl">
+                    <span class="details">Movie Genre   :     <p class="movie_genre"> Action, adventure, sci-fi</p></span class="details"><br>
+                    <span class="details">Censorship      :     <p class="Censorship"> 13+</p></span class="details"><br>
+                    <span class="details">Language        :     <p class="language">English</p></span class="details"><br>
+                 </div>
+                 <div class="storyline">
+                    <p>Storyline</p>
+                    <div class="line"></div>
+                    <div class="st">
+                        <p class="desc">As the Advenger and their allies have to continue to protect the world from threats 
+                            to large for any one hero to handle, a new danger has emerged from the cosmic 
+                            shadow : Thanos and nosone hero to handle, a new danger has emerged from the cosmic 
+                            shadow : Thanos and nosone hero to handle, a new danger has emerged from the cosmic 
+                            shadow : Thanos and nos
+                        </p>
+                        <span class="see-more"  onclick="toggleText()">...See more</span>
+                    </div>
+                    
+
+                 </div>
+                 <div class="dicrector">
+                    <p>Director</p>
+                    <div class="line"></div>
+                    <div class="list_director">
+                        <div class="dir">
+                            <img src="../image/detail_imgae/director.png" alt="director" class="pic_director">
+                            <p class="name_director">James Gunn </p>
+                        </div>
+                        <div class="dir">
+                            <img src="../image/detail_imgae/director.png" alt="director" class="pic_director">
+                            <p class="name_director">James Gunn</p>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="Actor">
+                    <p>Actor</p>
+                    <div class="line"></div>
+                    <div class="list_actor">
+                        <div class="act">
+                            <img src="../image/detail_imgae/director.png" alt="actor" class="pic_actor">
+                            <p class="name_director">James Gunn</p>
+                        </div>
+                        <div class="act">
+                            <img src="../image/detail_imgae/director.png" alt="actor" class="pic_actor">
+                            <p class="name_director">James Gunn</p>
+                        </div>
+                        <div class="act">
+                            <img src="../image/detail_imgae/director.png" alt="actor" class="pic_actor">
+                            <p class="name_director">James Gunn</p>
+                        </div>
+                        <div class="act">
+                            <img src="../image/detail_imgae/director.png" alt="actor" class="pic_actor">
+                            <p class="name_director">James Gunn</p>
+                        </div>
+
+                    </div>
+                 </div>
+                 <div class="descript_">
+                    <div class="thacamxuc">
+                        <div class="like"></div>
+                        <div class="unlike"></div>
+
+                    </div>
+                    <div class="booking_trailer">
+                        <button type="button">Booking</button>
+                        <button type="button"><img src="../image/detail_imgae/trailer poligon.png" alt=""> Trailer</button>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer-placeholder">
+        .
+    </div>
+    <!-- Vị trí để chèn footer -->
+    <script src="../javascript/loadHeaderFooter.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    // Kiểm tra chiều cao của phần tử văn bản
+    const desc = document.querySelector('.desc');
+    const seeMore = document.querySelector('.see-more');
+    
+    // Kiểm tra nếu chiều cao của đoạn văn bản lớn hơn 3 dòng
+    if (desc.scrollHeight > desc.clientHeight) {
+        seeMore.style.display = 'inline-block'; // Hiển thị "See more"
+    } else {
+        seeMore.style.display = 'none'; // Ẩn "See more" nếu văn bản không vượt quá 3 dòng
+    }
+});
+
+function toggleText() {
+    const storyline = document.querySelector('.st');
+    const seeMore = document.querySelector('.see-more');
+    storyline.classList.toggle('open'); // Thêm hoặc bỏ lớp 'open'
+
+    if (storyline.classList.contains('open')) {
+        seeMore.style.display = 'none'; // Ẩn nút "See more" khi nội dung đã mở rộng
+    }
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile</title>
+        <link rel="stylesheet" href="../css/profile.css" />
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+        <main>
+            <h1>PROFILE</h1>
+            <div class="edit_prf">
+                <div id="edit_inf">
+                    <table>
+                        <tr>
+                            <td><label for="firstName">FirstName:</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    placeholder="Nguyen "
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="lastName">LastName:</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    placeholder="Dinh Linh"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="username">Username:</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="username"
+                                    placeholder="nguyenxdzai"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="phoneNumber">Phone number:</label>
+                            </td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="phoneNumber"
+                                    placeholder="098231786"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email:</label></td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="email"
+                                    placeholder="abc@gamil.com"
+                                />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="line"></div>
+                <div id="edit_avt">
+                    <table>
+                        <tr>
+                            <td><label for="avt">Avatar:</label></td>
+                            <td>
+                                <div class="image">
+                                    <img
+                                        src="../image/homePage_image/img1.jpg"
+                                        alt="Ảnh minh hoạ"
+                                        id="avt"
+                                    />
+                                </div>
+                                <button type="button" id="btnUpload">
+                                    Upload
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="btnsave">
+                <button type="button" id="btnSave">Update Profile</button>
+            </div>
+        </main>
+        <div id="footer-placeholder"></div>
+        <script src="../javascript/loadHeaderFooter.js"></script>
+    </body>
+</html>

@@ -163,11 +163,95 @@
                       </div>
                       <button class="submit_seats" id="submit-seats">Submit Seats</button>
             </div>
-            <div class="st_right"></div>
+            <div class="st_right">
+    <p>Select Date & Time</p>
+    <form id="dateTimeForm">
+          <label for="year">Year:</label>
+          <input type="text" id="year" readonly>
+      
+
+      <label for="month">Month:</label>
+      <select id="month" onchange="updateDays()">
+        <option value="1">January</option>
+        <option value="2">February</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+
+      <label for="day">Day:</label>
+      <select id="day">
+        <!-- Days sẽ được thêm bằng JavaScript -->
+      </select>
+
+      <label for="partOfDay">Part of Day:</label>
+      <select id="partOfDay">
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+        <option value="evening">Evening</option>
+      </select>
+
+      <button type="button" class="subtime">Submit Time</button>
+    </form>
+
+            </div>
         </div>
+        <div class="thanhngang"></div>
+        <div class="pay">
+            <h1>Payment Method</h1>
+            <div class="payment">
+                <div class="pl">
+                    <ul class="menu">
+                        <li id="toggleElement" class="toggle-element momo">
+                            <div class="left">
+                                <img src="../image/detail_imgae/momo.png" alt="">
+                                <span>Momo</span>
+                            </div>
+                            <div class="right">></div>
+                        </li>
+                        <li id="toggleElement" class="toggle-element zalopay">
+                            <div class="left">
+                                <img src="../image/detail_imgae/zalopay.png" alt="">
+                                <span>Zalo Pay</span>
+                            </div>
+                            <div class="right">></div>
+                        </li>
+                        <li id="toggleElement" class="toggle-element shopeepay">
+                            <div class="left">
+                                <img src="../image/detail_imgae/shopeepay.png" alt="">
+                                <span>Shopee Pay</span>
+                            </div>
+                            <div class="right">></div>
+                        </li>
+                        <li id="toggleElement" class="toggle-element atmcard">
+                            <div class="left">
+                                <img src="../image/detail_imgae/atm.png" alt="">
+                                <span>ATM Card</span>
+                            </div>
+                            <div class="right">></div>
+                        </li>
+                        <li id="toggleElement" class="toggle-element visa">
+                            <div class="left">
+                                <img src="../image/detail_imgae/visa.png" alt="">
+                                <span>International payments</span>
+                            </div>
+                            <div class="right">></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pr"></div>
+            </div>
+        </div>
+
     </main>
     <div id="footer-placeholder">
-        .
     </div>
     <!-- Vị trí để chèn footer -->
     <script src="../javascript/loadHeaderFooter.js"></script>
@@ -216,6 +300,71 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+
+  ////////////////////////// dung de sinh time 
+  // Hàm kiểm tra năm nhuận
+function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+}
+
+// Hàm cập nhật số ngày trong tháng
+function updateDays() {
+  const year = new Date().getFullYear(); // Lấy năm hiện tại
+  const month = parseInt(document.getElementById('month').value, 10);
+
+  let daysInMonth;
+  if (month === 2) {
+    daysInMonth = isLeapYear(year) ? 29 : 28; // Tháng 2
+  } else if ([4, 6, 9, 11].includes(month)) {
+    daysInMonth = 30; // Các tháng có 30 ngày
+  } else {
+    daysInMonth = 31; // Các tháng có 31 ngày
+  }
+
+  const daySelect = document.getElementById('day');
+  daySelect.innerHTML = ""; // Xóa các tùy chọn cũ
+  for (let i = 1; i <= daysInMonth; i++) {
+    const option = document.createElement('option');
+    option.value = i;
+    option.textContent = i;
+    daySelect.appendChild(option);
+  }
+}
+
+// Khởi tạo năm hiện tại
+function setCurrentYear() {
+  const currentYear = new Date().getFullYear();
+  document.getElementById('year').value = currentYear; // Hiển thị năm hiện tại
+}
+
+// Gọi hàm khởi tạo khi tải trang
+window.onload = () => {
+  setCurrentYear(); // Hiển thị năm hiện tại
+  updateDays(); // Cập nhật số ngày
+};
+// ********* bấm chọn phưognt hức thanh toán
+// document.getElementById("toggleElement").addEventListener("click", function() {
+//     // Kiểm tra xem phần tử đã có class "active" hay chưa
+//     if (this.classList.contains("active")) {
+//         // Nếu có, loại bỏ class "active" và trở lại màu nền ban đầu
+//         this.classList.remove("active");
+//     } else {
+//         // Nếu chưa, thêm class "active" và thay đổi màu nền
+//         this.classList.add("active");
+//     }
+// });
+// Lắng nghe sự kiện click vào tất cả các phần tử có class "toggle-element"
+document.querySelectorAll('.toggle-element').forEach(function(element) {
+    element.addEventListener('click', function() {
+        // Tự động loại bỏ class "active" khỏi tất cả các phần tử
+        document.querySelectorAll('.toggle-element').forEach(function(el) {
+            el.classList.remove('active');
+        });
+
+        // Thêm class "active" vào phần tử hiện tại
+        this.classList.add('active');
+    });
+});
   
     </script>
 </body>

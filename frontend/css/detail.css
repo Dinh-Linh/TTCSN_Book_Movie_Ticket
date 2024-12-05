@@ -718,10 +718,10 @@ main .st_left.seat-selection {
   line-height: 125%; /* 22.5px */
   margin-top: 50px;
 }
-.st_left button.submit_seats:hover{
+.st_left button.submit_seats:hover {
   cursor: pointer;
 }
-.st_left button.submit_seats:active{
+.st_left button.submit_seats:active {
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Tạo bóng trắng */
   outline: none;
 }
@@ -742,3 +742,149 @@ main .seat_time .st_right {
   padding-right: 100px;
   align-items: center; */
 }
+main .seat_time .st_right > p {
+  color: #f2f2f2;
+
+  leading-trim: both;
+
+  text-edge: cap;
+  font-family: sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 36px; /* 128.571% */
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 71px;
+}
+main .seat_time .st_right form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fcc434;
+  text-align: center;
+  font-size: 1.8rem;
+}
+main .seat_time .st_right select,
+input {
+  width: 400px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-left: 131px;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+main .seat_time .st_right button.subtime {
+  height: 48px;
+  width: 150px;
+  display: flex;
+  padding: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--Primary, #fcc434);
+  outline: none;
+
+  margin-top: 94px;
+  margin-left: 255px;
+
+  margin-bottom: 15px;
+  /* typograph */
+
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+
+  line-height: 125%; /* 22.5px */
+}
+
+main .seat_time .st_right input[readonly] {
+  background-color: #555;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+main .seat_time .st_right button.subtime {
+  background-color: #ffcc00;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+main .seat_time .st_right button.subtime:active {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Tạo bóng trắng */
+  outline: none;
+}
+/* **************** payment ********** */
+.pay {
+  margin-top: 20px;
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.pay > h1 {
+  color: #fff;
+  padding-left: 77px;
+}
+.pay .payment {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+}
+.pl {
+  margin-top: 10px;
+  width: 639px;
+  border-right: 1px solid #cdcdcd;
+  padding-left: 78px;
+  height: 480px;
+}
+.pl > ul {
+  width: 400px;
+  height: 480px;
+}
+.pl > ul li {
+  width: 100%;
+  height: 80px;
+  border-radius: 12px;
+  background: var(--Neutral-N700, #1c1c1c);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.pl > ul li .left {
+  margin-left: 16px;
+  display: flex;
+  width: 290px;
+  align-items: center;
+  justify-content: space-between;
+}
+.pl > ul li .left img {
+  width: 86px;
+  height: 48px;
+}
+.pl > ul li .left span {
+  width: 188px;
+  font-size: 1.6rem;
+}
+.pl > ul li.toggle-element.active {
+  border-radius: 12px;
+  border: 1px solid var(--Primary, #fcc434);
+  background: var(--Secondary, #261d08);
+}
+.pl > ul li .right{
+  color: white;
+  margin-right: 10px;
+  font-size: 2.4rem;
+}
+.pr {
+  margin-top: 10px;
+}
+

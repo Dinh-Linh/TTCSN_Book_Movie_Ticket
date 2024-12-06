@@ -197,6 +197,7 @@
         <option value="afternoon">Afternoon</option>
         <option value="evening">Evening</option>
       </select>
+      
 
       <button type="button" onclick="submittime()" class="subtime">Submit Time</button>
     </form>
@@ -490,7 +491,9 @@ function applyDiscount() {
 
         // Cập nhật giá sau khi giảm
         totalPriceElement.textContent = `${discountedPrice} VND`;
-    } else {
+    } else if(discountCode==""){
+        totalPriceElement.textContent = `${price} VND`;
+    } else{
         // Nếu mã giảm giá không hợp lệ, thông báo lỗi
         alert("Mã giảm giá không hợp lệ.");
     }

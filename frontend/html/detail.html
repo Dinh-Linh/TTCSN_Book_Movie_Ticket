@@ -125,14 +125,14 @@
 
                     </div>
                     <div class="booking_trailer">
-                        <button type="button" class="booking">Booking</button>
+                        <button type="button" class="booking"><a href="#seattime-top">Booking</a></button>
                         <button type="button" class="trailer"><img src="../image/detail_imgae/trailer poligon.png" alt=""> Trailer</button>
                     </div>
                  </div>
             </div>
         </div>
-        <div class="thanhngang"></div>
-        <div class="seat_time">
+        <div class="thanhngang" id="seattime-top"></div>
+        <div class="seat_time" >
             <div class="st_left">
                 <p>Select Seats</p>
                 <div class="manchieu">
@@ -161,7 +161,7 @@
                         </div>
                         
                       </div>
-                      <button class="submit_seats" id="submit-seats">Submit Seats</button>
+                      <button class="submit_seats" onclick="submit_seats()" id="submit-seats">Submit Seats</button>
             </div>
             <div class="st_right">
     <p>Select Date & Time</p>
@@ -198,7 +198,7 @@
         <option value="evening">Evening</option>
       </select>
 
-      <button type="button" class="subtime">Submit Time</button>
+      <button type="button" onclick="submittime()" class="subtime">Submit Time</button>
     </form>
 
             </div>
@@ -246,7 +246,36 @@
                         </li>
                     </ul>
                 </div>
-                <div class="pr"></div>
+                <div class="pr">
+                    <div class="line">
+                        <span>Order ID</span>
+                        <p id="orderID">XXXXXXXXX</p> 
+                    </div>
+                    <div class="line">
+                        <span>Seats</span>
+                        <p id="seats_buy">XX</p> 
+                    </div>
+                    <div class="line">
+                        <span>Date&Time</span>
+                        <p id="datetimeticket">XX/XX/XXXX</p> 
+                    </div>
+                    <div class="line">
+                        <span>Price</span>
+                        <p id="price">XXXXXXXXXX <span>VND</span></p>
+                    </div>
+                    <div class="line">
+                        <input type="text" placeholder="Discount code" id="discount">
+                        <button type="button" onclick="applyDiscount()" class="apply-dis" >APPLY</button>
+                    </div>
+                    <div class="line thanh"></div>
+                    <div class="line total">
+                        <span>Total</span>
+                        <p class="totalprice">XXXXXXXX <span> VND</span></p>
+                    </div>
+                    <div class="line buytick">
+                        <button type="button" class="buyticket">Buy Ticket</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -365,7 +394,108 @@ document.querySelectorAll('.toggle-element').forEach(function(element) {
         this.classList.add('active');
     });
 });
+
+// xuwr lys su kien
+function submit_seats() {
+  // Lấy tất cả các ghế đã được chọn
+  const selectedSeats = document.querySelectorAll(".seat.selected");
+
+  // Lấy thông tin (nội dung) của các ghế đã chọn
+  const selectedSeatNumbers = Array.from(selectedSeats).map(seat => seat.innerText);
+
+  // Hiển thị danh sách ghế đã chọn trong thẻ <p> có id="seats_buy"
+  const seatsBuyElement = document.getElementById("seats_buy");
+  const priceElement = document.getElementById("price");
+
+  if (selectedSeatNumbers.length > 0) {
+    // Cập nhật danh sách ghế đã chọn vào phần tử với id="seats_buy"
+    seatsBuyElement.textContent = `${selectedSeatNumbers.join(", ")}`;
+
+    // Tính tổng số ghế đã chọn và hiển thị
+    const totalSeats = selectedSeatNumbers.length;
+    const pricePerSeat = 160000; // Giá mỗi ghế (ví dụ: 160k VND)
+    const totalPrice = totalSeats * pricePerSeat;
+
+    // Hiển thị tổng tiền vào phần tử với id="price"
+    priceElement.innerHTML = `${totalPrice} <span>VND</span>`;
+
+    // Log số ghế đã chọn và tổng số ghế ra console
+    console.log("Ghế đã chọn:", selectedSeatNumbers.join(", "));
+    console.log("Tổng số ghế:", totalSeats);
+    console.log("Tổng giá:", totalPrice, "VND");
+  } else {
+    // Nếu không có ghế nào được chọn
+    alert("Bạn chưa chọn ghế nào cả !!!!!!");
+    seatsBuyElement.textContent = "XXXX";
+    priceElement.innerHTML = "XXXX <span>VND</span>";
+  }
+}
+
+function submittime() {
+  // Lấy giá trị từ các trường trong form
+  const year = document.getElementById('year').value;
+  const month = document.getElementById('month').value;
+  const day = document.getElementById('day').value;
+  const partOfDay = document.getElementById('partOfDay').value;
+
+  // Tạo chuỗi thời gian đã chọn
+  const timedachon = `${day}/${month}/${year}, ${partOfDay}`;
+
+  // Hiển thị thời gian đã chọn trong thẻ <p> có id="datetimeticket"
+  const dateTimeTicketElement = document.getElementById('datetimeticket');
+  dateTimeTicketElement.textContent = timedachon;
+
+  // Log thông tin ra console (tuỳ chọn)
+  console.log(timedachon);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Tạo Order ID ngẫu nhiên
+  function generateOrderID() {
+    return Math.floor(100000000 + Math.random() * 900000000); // Tạo số ngẫu nhiên 9 chữ số
+  }
+
+  // Hiển thị Order ID khi trang tải hiển thị qua <p id="orderID">XXXXXXXXX</p>
+  const orderIDElement = document.getElementById("orderID");
+  orderIDElement.textContent = generateOrderID();
+});
   
+// Một số mã giảm giá giả
+const discountCodes = {
+    'GIAM30': 0.30, // 30% giảm
+    'GIAM50': 0.50, // 50% giảm
+    'GIAM10': 0.10,  // 10% giảm
+    'GIAM70': 0.70,
+    'GIAM20': 0.20,
+    'GIAM40': 0.40,
+    'GIAM60': 0.60,
+    'GIAM80': 0.80,
+    'GIAM90': 0.90,
+    'GIAM100': 0.0
+};
+
+function applyDiscount() {
+    // Lấy giá trị mã giảm giá từ input
+    const discountCode = document.getElementById('discount').value.trim().toUpperCase();
+    const priceElement = document.getElementById('price');
+    const totalPriceElement = document.querySelector('.totalprice');
+    
+    // Lấy giá gốc từ phần tử price
+    let price = parseInt(priceElement.textContent.replace(' VND', '').trim(), 10);
+
+    // Kiểm tra mã giảm giá có hợp lệ không
+    if (discountCodes[discountCode]) {
+        const discount = discountCodes[discountCode]; // Lấy phần trăm giảm
+        const discountedPrice = price - (price * discount); // Tính giá sau giảm
+
+        // Cập nhật giá sau khi giảm
+        totalPriceElement.textContent = `${discountedPrice} VND`;
+    } else {
+        // Nếu mã giảm giá không hợp lệ, thông báo lỗi
+        alert("Mã giảm giá không hợp lệ.");
+    }
+}
+
     </script>
 </body>
 </html>

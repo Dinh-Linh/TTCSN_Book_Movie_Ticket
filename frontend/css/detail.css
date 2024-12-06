@@ -757,7 +757,7 @@ main .seat_time .st_right > p {
   margin-top: 10px;
   margin-bottom: 71px;
 }
-main .seat_time .st_right form label {
+main .seat_time .st_right form#dateTimeForm label {
   display: block;
   margin-top: 10px;
   font-weight: bold;
@@ -765,8 +765,8 @@ main .seat_time .st_right form label {
   text-align: center;
   font-size: 1.8rem;
 }
-main .seat_time .st_right select,
-input {
+main .seat_time .st_right form#dateTimeForm select,
+form#dateTimeForm input {
   width: 400px;
   padding: 8px;
   margin-top: 5px;
@@ -804,7 +804,7 @@ main .seat_time .st_right button.subtime {
   line-height: 125%; /* 22.5px */
 }
 
-main .seat_time .st_right input[readonly] {
+main .seat_time .st_right form#dateTimeForm input[readonly] {
   background-color: #555;
   color: #fff;
   cursor: not-allowed;
@@ -824,7 +824,7 @@ main .seat_time .st_right button.subtime:active {
 /* **************** payment ********** */
 .pay {
   margin-top: 20px;
-  
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -841,7 +841,7 @@ main .seat_time .st_right button.subtime:active {
 .pl {
   margin-top: 10px;
   width: 639px;
-  border-right: 1px solid #cdcdcd;
+  
   padding-left: 78px;
   height: 480px;
 }
@@ -879,12 +879,98 @@ main .seat_time .st_right button.subtime:active {
   border: 1px solid var(--Primary, #fcc434);
   background: var(--Secondary, #261d08);
 }
-.pl > ul li .right{
+.pl > ul li .right {
   color: white;
   margin-right: 10px;
   font-size: 2.4rem;
 }
 .pr {
-  margin-top: 10px;
-}
+  width: 639px;
 
+  padding-top: 20px;
+  border-left: 2px solid #595959;
+  background: rgba(24, 23, 23, 0.8);
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+.pr .line {
+  width: 550px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-right: 30px;
+}
+.pr .line span {
+  color: #fff;
+  font-size: 24px;
+}
+.pr .line p {
+  color: #fff;
+  font-size: 24px;
+}
+.pr .line input {
+  outline: none;
+  background: rgba(24, 23, 23, 0.8);
+  width: 406px;
+  height: 32px;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 20px;
+  border-radius: 8px 0 0 8px;
+}
+.pr .line input:placeholder-shown {
+  color: #fff;
+}
+.pr .line button.apply-dis {
+  height: 36px;
+  width: 124px;
+  border-radius: 0 8px 8px 0;
+  background: var(--Primary, #fcc434);
+  display: flex;
+  width: 119px;
+  height: 40px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.pr .line button.apply-dis:active {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Tạo bóng trắng */
+}
+.pr .line + .thanh {
+  margin-top: 20px;
+  background-color: #fff;
+  width: 520px;
+  height: 1px;
+}
+.pr .line p.totalprice span,
+.pr .line p.totalprice {
+  color: #fcc434;
+  font-size: 24px;
+}
+.pr .line + .buytick {
+  margin-top: 30px;
+  height: 56px;
+}
+.pr .line + .buytick button.buyticket {
+  height: 56px;
+  width: 191px;
+  border-radius: 60px;
+  background: var(--Primary, #fcc434);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 172px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.pr .line + .buytick button.buyticket:active {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Tạo bóng trắng */
+}

@@ -974,3 +974,77 @@ main .seat_time .st_right button.subtime:active {
 .pr .line + .buytick button.buyticket:active {
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Tạo bóng trắng */
 }
+/* //////////////// thong bao .......... */
+/* styles.css */
+
+#customMessage {
+  margin-top: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  align-items: center;
+  background: #363333;
+  padding-top: 10px;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Tạo bóng trắng */
+  position: fixed;  /* Đặt phần tử cố định trên màn hình */
+  top: 50%;  /* Căn giữa theo chiều dọc */
+  left: 50%;  /* Căn giữa theo chiều ngang */
+  transform: translate(-50%, -50%);  /* Căn giữa hoàn hảo */
+  opacity: 0;  /* Ban đầu ẩn đi */
+  z-index: 1000;  /* Đảm bảo phần tử nổi lên trên tất cả */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển động */
+}
+#customMessage .thanhngang {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+}
+#customMessage img.qr {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 20px;
+}
+#customMessage p {
+  color: #fff;
+  font-size: 16px;
+}
+#customMessage .list_tt {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#customMessage .list_tt:last-of-type {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+#customMessage .list_tt button {
+  width: 90px;
+  height: 30px;
+  background-color: #fcc434;
+  border-radius: 16px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#customMessage .list_tt button:active {
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Tạo bóng trắng */
+}
+#customMessage.hidden {
+  display: none; /* Ẩn hoàn toàn phần tử */
+}
+
+#customMessage.show {
+  display: flex;  /* Hiển thị lại phần tử */
+  opacity: 1;  /* Mờ dần vào */
+  transform: translate(-50%, -50%) scale(1.1); /* Phóng to nhẹ khi xuất hiện */
+}

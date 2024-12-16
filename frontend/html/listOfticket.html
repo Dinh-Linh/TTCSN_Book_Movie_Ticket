@@ -28,7 +28,12 @@
                   <img src="../image/detail_imgae/avatar.png" alt="" />
                 </div>
                 <div class="middle">
-                  <p>AVATAR: Dangerously</p>
+                  <p class="namefilm">AVATAR: Dangerously</p>
+                  <div class="time">
+                    <p class="date">Date : 21/12/2024</p>
+                    <p class="hour">Time : 10:00 AM</p>
+                  </div>
+                  <p class="mseat">Seats : A1,B1</p>
                 </div>
                 <div class="right">></div>
               </li>
@@ -41,8 +46,14 @@
                   <img src="../image/detail_imgae/avatar.png" alt="" />
                 </div>
                 <div class="middle">
-                  <p>Harry Potter và chiếc cốc lửa</p>
+                  <p class="namefilm">Harry Potter và chiếc cốc lửa</p>
+                  <div class="time">
+                    <p class="date">Date : 21/12/2024</p>
+                    <p class="hour">Time : 10:00 AM</p>
+                  </div>
+                  <p class="mseat">Seats : A1,B1</p>
                 </div>
+
                 <div class="right">></div>
               </li>
               <li
@@ -53,7 +64,14 @@
                 <div class="left">
                   <img src="../image/detail_imgae/avatar.png" alt="" />
                 </div>
-                <div class="middle"><p>Songoku multi univers</p></div>
+                <div class="middle">
+                  <p class="namefilm">Songoku multi univers</p>
+                  <div class="time">
+                    <p class="date">Date : 21/12/2024</p>
+                    <p class="hour">Time : 10:00 AM</p>
+                  </div>
+                  <p class="mseat">Seats : A1,B1</p>
+                </div>
 
                 <div class="right">></div>
               </li>
@@ -65,7 +83,14 @@
                 <div class="left">
                   <img src="../image/detail_imgae/avatar.png" alt="" />
                 </div>
-                <div class="middle"><p>One Punch Man</p></div>
+                <div class="middle">
+                  <p class="namefilm">One Punch Man</p>
+                  <div class="time">
+                    <p class="date">Date : 21/12/2024</p>
+                    <p class="hour">Time : 10:00 AM</p>
+                  </div>
+                  <p class="mseat">Seats : A1,B1</p>
+                </div>
 
                 <div class="right">></div>
               </li>
@@ -77,7 +102,14 @@
                 <div class="left">
                   <img src="../image/detail_imgae/avatar.png" alt="" />
                 </div>
-                <div class="middle"><p>Doraemon phiêu lưu ký</p></div>
+                <div class="middle">
+                  <p class="namefilm">Doraemon phiêu lưu ký</p>
+                  <div class="time">
+                    <p class="date">Date : 21/12/2024</p>
+                    <p class="hour">Time : 10:00 AM</p>
+                  </div>
+                  <p class="mseat">Seats : A1,B1</p>
+                </div>
 
                 <div class="right">></div>
               </li>
@@ -240,7 +272,7 @@
       },
     ];
 
-    // Show ticket details
+    // Hiển thị chi tiết vé
     function showTicketDetail(index) {
       const ticket = tickets[index];
       document.getElementById("orderID").textContent = ticket.orderID;
@@ -252,9 +284,23 @@
       document.getElementById("discount").textContent = ticket.discount;
       document.getElementById("totalPrice").textContent =
         ticket.totalPrice + " VND";
+
+      // Hiển thị div.pr
+      const prElement = document.querySelector(".pr");
+      prElement.classList.add("active");
+
+      // Tự động loại bỏ class "active" khỏi tất cả các phần tử
+      document.querySelectorAll(".toggle-element").forEach(function (el) {
+        el.classList.remove("active");
+      });
+
+      // Thêm class "active" vào phần tử hiện tại
+      document
+        .querySelectorAll(".toggle-element")
+        [index].classList.add("active");
     }
 
-    // Reset ticket details
+    // Reset chi tiết vé và ẩn div.pr
     function resetDetail() {
       document.getElementById("orderID").textContent = "XXXXXXXXX";
       document.getElementById("seats_buy").textContent = "XX";
@@ -264,7 +310,12 @@
       document.getElementById("price").textContent = "XXXXXXXXXX VND";
       document.getElementById("discount").textContent = "XX%";
       document.getElementById("totalPrice").textContent = "XXXXXXXX VND";
-      // Tự động loại bỏ class "active" khỏi tất cả các phần tử
+
+      // Ẩn div.pr
+      const prElement = document.querySelector(".pr");
+      prElement.classList.remove("active");
+
+      // Loại bỏ class "active" khỏi tất cả các toggle-element
       document.querySelectorAll(".toggle-element").forEach(function (el) {
         el.classList.remove("active");
       });
